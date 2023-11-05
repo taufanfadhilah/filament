@@ -51,4 +51,14 @@ class Employee extends Model
     {
         return $this->belongsTo(City::class);
     }
+
+    /**
+     * Get the team that owns the Employee
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function team(): BelongsTo
+    {
+        return $this->belongsTo(Team::class);
+    }
 }
